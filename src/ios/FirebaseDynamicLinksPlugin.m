@@ -8,6 +8,7 @@
     NSLog(@"Starting Firebase DynamicLinks plugin");
 
     if (![FIRApp defaultApp]) {
+        NSLog(@"FIRApp configure");
         [FIRApp configure];
     }
 

@@ -21,13 +21,13 @@
         <merges target="cordova.plugins.firebase.dynamiclinks" />
     </js-module>
 
-    <preference name="APP_DOMAIN_NAME" />
+    <preference name="APP_DOMAIN_NAME" default="links.en.tel" />
     <preference name="APP_DOMAIN_PATH" default="/" />
+
+    <preference name="APP_DOMAIN_ALT_1" default="app.entel.cl" />
 
     <platform name="ios">
         <preference name="IOS_FIREBASE_POD_VERSION" default="10.7.0" />
-
-        <!-- <hook type="after_prepare" src="hooks/ios/iOSCopyPreferences.js" /> -->
 
         <config-file parent="/*" target="config.xml">
             <preference name="DOMAIN_URI_PREFIX" value="https://$APP_DOMAIN_NAME$APP_DOMAIN_PATH" />
@@ -62,11 +62,17 @@
             <array>
                 <string>applinks:$APP_DOMAIN_NAME</string>
             </array>
+            <array>
+                <string>applinks:$APP_DOMAIN_ALT_1</string>
+            </array>
         </config-file>
 
         <config-file target="*-Release.plist" parent="com.apple.developer.associated-domains">
             <array>
                 <string>applinks:$APP_DOMAIN_NAME</string>
+            </array>
+            <array>
+                <string>applinks:$APP_DOMAIN_ALT_1</string>
             </array>
         </config-file>
 
@@ -88,9 +94,6 @@
     <platform name="android">
         <preference name="ANDROID_FIREBASE_BOM_VERSION" default="31.4.0" />
 
-        <!-- <hook type="after_prepare" src="hooks/android/androidCopyPreferences.js" />
-        <hook type="before_plugin_install" src="hooks/android/build_gradle_add_dependency.js" /> -->
-
         <config-file parent="/*" target="res/xml/config.xml">
             <preference name="DOMAIN_URI_PREFIX" value="https://$APP_DOMAIN_NAME$APP_DOMAIN_PATH" />
             <feature name="FirebaseDynamicLinks">
@@ -111,10 +114,19 @@
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
-                <data android:host="$APP_DOMAIN_NAME" android:pathPrefix="$APP_DOMAIN_PATH"
-                    android:scheme="http" />
-                <data android:host="$APP_DOMAIN_NAME" android:pathPrefix="$APP_DOMAIN_PATH"
-                    android:scheme="https" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="$APP_DOMAIN_NAME" />
+                <data android:pathPrefix="$APP_DOMAIN_PATH" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="$APP_DOMAIN_ALT_1" />
+                <data android:pathPrefix="/" />
             </intent-filter>
         </config-file>
 
