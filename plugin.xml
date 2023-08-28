@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-firebase-dynamiclinks"
-    version="7.0.2-NTL1">
+    version="7.0.2-NTL2">
 
     <name>FirebaseDynamicLinksPlugin</name>
     <description>Cordova plugin for Firebase Dynamic Links</description>
@@ -25,6 +25,7 @@
     <preference name="APP_DOMAIN_PATH" default="/" />
 
     <preference name="APP_DOMAIN_ALT_1" default="app.entel.cl" />
+    <preference name="APP_DOMAIN_ALT_2" default="entel.cl" />
 
     <platform name="ios">
         <preference name="IOS_FIREBASE_POD_VERSION" default="10.7.0" />
@@ -65,6 +66,9 @@
             <array>
                 <string>applinks:$APP_DOMAIN_ALT_1</string>
             </array>
+            <array>
+                <string>applinks:$APP_DOMAIN_ALT_2</string>
+            </array>
         </config-file>
 
         <config-file target="*-Release.plist" parent="com.apple.developer.associated-domains">
@@ -73,6 +77,9 @@
             </array>
             <array>
                 <string>applinks:$APP_DOMAIN_ALT_1</string>
+            </array>
+            <array>
+                <string>applinks:$APP_DOMAIN_ALT_2</string>
             </array>
         </config-file>
 
@@ -127,6 +134,15 @@
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_1" />
                 <data android:pathPrefix="/" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="$APP_DOMAIN_ALT_2" />
+                <data android:pathPrefix="/beneficios" />
             </intent-filter>
         </config-file>
 
