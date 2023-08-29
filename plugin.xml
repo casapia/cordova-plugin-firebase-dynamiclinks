@@ -149,6 +149,7 @@
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_2" />
+                <data android:pathPrefix="/beneficios" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
@@ -157,6 +158,7 @@
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_3" />
+                <data android:pathPrefix="/beneficios" />
             </intent-filter>
         </config-file>
 
