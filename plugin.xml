@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-firebase-dynamiclinks"
-    version="7.0.2-NTL2">
+    version="8.0.0-NTL2">
 
     <name>FirebaseDynamicLinksPlugin</name>
     <description>Cordova plugin for Firebase Dynamic Links</description>
@@ -25,7 +25,8 @@
     <preference name="APP_DOMAIN_PATH" default="/" />
 
     <preference name="APP_DOMAIN_ALT_1" default="app.entel.cl" />
-    <preference name="APP_DOMAIN_ALT_2" default="entel.cl" />
+    <!-- <preference name="APP_DOMAIN_ALT_2" default="miperfil.entel.cl" /> -->
+    <preference name="APP_DOMAIN_ALT_2" default="entel.casapia.dev" />
     <preference name="APP_DOMAIN_ALT_3" default="www.entel.cl" />
 
     <platform name="ios">
@@ -142,6 +143,7 @@
                 <data android:host="$APP_DOMAIN_ALT_1" />
                 <data android:pathPrefix="/" />
             </intent-filter>
+            <!-- miperfil.entel.cl -->
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -149,6 +151,34 @@
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_2" />
+                <data android:pathPrefix="/cl_web_unified_payment_eu" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="$APP_DOMAIN_ALT_2" />
+                <data android:pathPrefix="/mientelpublico/recarga" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="$APP_DOMAIN_ALT_2" />
+                <data android:pathPrefix="/cl_web_reseller_subscription_eu/netflixlandingsubscribe" />
+            </intent-filter>
+            <!-- www.entel.cl -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="$APP_DOMAIN_ALT_3" />
                 <data android:pathPrefix="/beneficios" />
             </intent-filter>
             <intent-filter android:autoVerify="true">
@@ -158,7 +188,7 @@
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_3" />
-                <data android:pathPrefix="/beneficios" />
+                <data android:pathPrefix="/netflix" />
             </intent-filter>
         </config-file>
 
