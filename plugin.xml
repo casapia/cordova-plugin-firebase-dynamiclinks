@@ -26,7 +26,8 @@
 
     <preference name="APP_DOMAIN_ALT_1" default="app.entel.cl" />
     <!-- <preference name="APP_DOMAIN_ALT_2" default="miperfil.entel.cl" /> -->
-    <preference name="APP_DOMAIN_ALT_2" default="entel.casapia.dev" />
+    <!-- <preference name="APP_DOMAIN_ALT_2" default="entel.casapia.dev" /> -->
+    <preference name="APP_DOMAIN_ALT_2" default="entel-dev.outsystemsenterprise.com" />
     <preference name="APP_DOMAIN_ALT_3" default="www.entel.cl" />
 
     <platform name="ios">
@@ -152,24 +153,7 @@
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_2" />
                 <data android:pathPrefix="/cl_web_unified_payment_eu" />
-            </intent-filter>
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-                <data android:host="$APP_DOMAIN_ALT_2" />
                 <data android:pathPrefix="/mientelpublico/recarga" />
-            </intent-filter>
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-                <data android:host="$APP_DOMAIN_ALT_2" />
-                <data android:pathPrefix="/cl_web_reseller_subscription_eu/netflixlandingsubscribe" />
             </intent-filter>
             <!-- www.entel.cl -->
             <intent-filter android:autoVerify="true">
@@ -180,15 +164,6 @@
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_3" />
                 <data android:pathPrefix="/beneficios" />
-            </intent-filter>
-            <intent-filter android:autoVerify="true">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="http" />
-                <data android:scheme="https" />
-                <data android:host="$APP_DOMAIN_ALT_3" />
-                <data android:pathPrefix="/netflix" />
             </intent-filter>
         </config-file>
 
