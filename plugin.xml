@@ -152,8 +152,8 @@
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_2" />
-                <data android:pathPrefix="/cl_web_unified_payment_eu" />
-                <data android:pathPrefix="/mientelpublico/recarga" />
+                <data android:pathPrefix="/CL_Web_Unified_Payment_EU" />
+                <data android:pathPrefix="/MiEntelPublico/Recarga" />
             </intent-filter>
             <!-- www.entel.cl -->
             <intent-filter android:autoVerify="true">
