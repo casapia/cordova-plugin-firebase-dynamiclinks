@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-firebase-dynamiclinks"
-    version="8.0.0-NTL2">
+    version="8.0.0-NTL2.1.1">
 
     <name>FirebaseDynamicLinksPlugin</name>
     <description>Cordova plugin for Firebase Dynamic Links</description>
@@ -26,8 +26,8 @@
 
     <preference name="APP_DOMAIN_ALT_1" default="app.entel.cl" />
     <!-- <preference name="APP_DOMAIN_ALT_2" default="miperfil.entel.cl" /> -->
-    <!-- <preference name="APP_DOMAIN_ALT_2" default="entel.casapia.dev" /> -->
-    <preference name="APP_DOMAIN_ALT_2" default="entel-dev.outsystemsenterprise.com" />
+    <preference name="APP_DOMAIN_ALT_2" default="entel.casapia.dev" />
+    <!-- <preference name="APP_DOMAIN_ALT_2" default="entel-dev.outsystemsenterprise.com" /> -->
     <preference name="APP_DOMAIN_ALT_3" default="www.entel.cl" />
 
     <platform name="ios">
@@ -152,8 +152,12 @@
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_2" />
-                <data android:pathPrefix="/CL_Web_Unified_Payment_EU" />
-                <data android:pathPrefix="/MiEntelPublico/Recarga" />
+                <data android:path="/CL_Web_Unified_Payment_EU" />
+                <data android:path="/CL_Web_Unified_Payment_EU/" />
+                <data android:path="/MiEntelPublico/Recarga" />
+                <data android:path="/MiEntelPublico/Recarga/" />
+                <data android:path="/CL_Web_Reseller_Subscription_EU/NetflixLandingSubscribe" />
+                <data android:path="/CL_Web_Reseller_Subscription_EU/NetflixLandingSubscribe/" />
             </intent-filter>
             <!-- www.entel.cl -->
             <intent-filter android:autoVerify="true">
@@ -164,6 +168,8 @@
                 <data android:scheme="https" />
                 <data android:host="$APP_DOMAIN_ALT_3" />
                 <data android:pathPrefix="/beneficios" />
+                <data android:path="/netflix" />
+                <data android:path="/netflix/" />
             </intent-filter>
         </config-file>
 
