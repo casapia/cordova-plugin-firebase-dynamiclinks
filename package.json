@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-firebase-dynamiclinks",
-  "version": "8.0.0-NTL2",
+  "version": "8.0.0-NTL2.1",
   "description": "Cordova plugin for Firebase Dynamic Links",
   "types": "./types/index.d.ts",
   "cordova": {
