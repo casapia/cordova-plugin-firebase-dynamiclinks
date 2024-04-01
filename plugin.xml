@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
     xmlns:android="http://schemas.android.com/apk/res/android"
     id="cordova-plugin-firebase-dynamiclinks"
-    version="8.0.0-NTL2.1">
+    version="8.0.0-NTL2.2">
 
     <name>FirebaseDynamicLinksPlugin</name>
     <description>Cordova plugin for Firebase Dynamic Links</description>
@@ -21,7 +21,7 @@
         <merges target="cordova.plugins.firebase.dynamiclinks" />
     </js-module>
 
-    <preference name="APP_DOMAIN_NAME" default="links.en.tel" />
+    <preference name="APP_DOMAIN_NAME" default="entel.page.link" />
     <preference name="APP_DOMAIN_PATH" default="/" />
 
     <preference name="APP_DOMAIN_ALT_1" default="app.entel.cl" />
