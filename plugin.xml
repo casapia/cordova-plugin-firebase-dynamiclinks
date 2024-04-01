@@ -1,7 +1,7 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    id="cordova-plugin-firebase-dynamiclinks"
-    version="7.0.2-NTL2">
+xmlns:android="http://schemas.android.com/apk/res/android"
+           id="cordova-plugin-firebase-dynamiclinks"
+      version="8.0.0">
 
     <name>FirebaseDynamicLinksPlugin</name>
     <description>Cordova plugin for Firebase Dynamic Links</description>
@@ -29,7 +29,7 @@
     <preference name="APP_DOMAIN_ALT_3" default="www.entel.cl" />
 
     <platform name="ios">
-        <preference name="IOS_FIREBASE_POD_VERSION" default="10.7.0" />
+        <preference name="IOS_FIREBASE_POD_VERSION" default="10.17.0" />
 
         <config-file parent="/*" target="config.xml">
             <preference name="DOMAIN_URI_PREFIX" value="https://$APP_DOMAIN_NAME$APP_DOMAIN_PATH" />
@@ -106,7 +106,7 @@
     </platform>
 
     <platform name="android">
-        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="31.4.0" />
+        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="32.5.0" />
 
         <config-file parent="/*" target="res/xml/config.xml">
             <preference name="DOMAIN_URI_PREFIX" value="https://$APP_DOMAIN_NAME$APP_DOMAIN_PATH" />
@@ -120,7 +120,7 @@
             <preference name="AndroidLaunchMode" value="singleTask" />
             <preference name="AndroidXEnabled" value="true" />
             <preference name="GradlePluginGoogleServicesEnabled" value="true" />
-            <preference name="GradlePluginGoogleServicesVersion" value="4.3.15" />
+            <preference name="GradlePluginGoogleServicesVersion" value="4.4.0" />
         </config-file>
 
         <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
