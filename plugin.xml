@@ -57,7 +57,7 @@
     </platform>
 
     <platform name="android">
-        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="32.7.1" />
+        <preference name="ANDROID_FIREBASE_BOM_VERSION" default="32.8.0" />
 
         <config-file parent="/*" target="res/xml/config.xml">
             <preference name="DOMAIN_URI_PREFIX" value="https://$DYNAMICLINKS_APP_DOMAIN_NAME$DYNAMICLINKS_APP_DOMAIN_PATH" />
@@ -71,7 +71,7 @@
             <preference name="AndroidLaunchMode" value="singleTask" />
             <preference name="AndroidXEnabled" value="true" />
             <preference name="GradlePluginGoogleServicesEnabled" value="true" />
-            <preference name="GradlePluginGoogleServicesVersion" value="4.4.0" />
+            <preference name="GradlePluginGoogleServicesVersion" value="4.3.15" />
         </config-file>
 
         <source-file src="src/android/FirebaseDynamicLinksPlugin.java"
