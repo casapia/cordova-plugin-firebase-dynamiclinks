@@ -16,6 +16,8 @@
 
     <dependency id="cordova-outsystems-firebase-core"
         url="https://github.com/OutSystems/cordova-outsystems-firebase-core.git#1.0.1" />
+    <dependency id="cordova-plugin-firebase-analytics"
+        url="https://github.com/casapia/cordova-plugin-firebase-analytics#dev" />
 
     <js-module name="FirebaseDynamicLinks" src="www/FirebaseDynamicLinks.js">
         <merges target="cordova.plugins.firebase.dynamiclinks" />
@@ -25,10 +27,11 @@
     <preference name="DYNAMICLINKS_APP_DOMAIN_PATH" default="/" />
 
     <platform name="ios">
-        <preference name="IOS_FIREBASE_POD_VERSION" default="10.28.0" />
+        <preference name="IOS_FIREBASE_POD_VERSION" default="~> 10.29.0" />
 
         <config-file parent="/*" target="config.xml">
-            <preference name="DOMAIN_URI_PREFIX" value="https://$DYNAMICLINKS_APP_DOMAIN_NAME$DYNAMICLINKS_APP_DOMAIN_PATH" />
+            <preference name="DOMAIN_URI_PREFIX"
+                value="https://$DYNAMICLINKS_APP_DOMAIN_NAME$DYNAMICLINKS_APP_DOMAIN_PATH" />
             <feature name="FirebaseDynamicLinks">
                 <param name="ios-package" value="FirebaseDynamicLinksPlugin" />
             </feature>
@@ -60,7 +63,8 @@
         <preference name="ANDROID_FIREBASE_BOM_VERSION" default="32.8.0" />
 
         <config-file parent="/*" target="res/xml/config.xml">
-            <preference name="DOMAIN_URI_PREFIX" value="https://$DYNAMICLINKS_APP_DOMAIN_NAME$DYNAMICLINKS_APP_DOMAIN_PATH" />
+            <preference name="DOMAIN_URI_PREFIX"
+                value="https://$DYNAMICLINKS_APP_DOMAIN_NAME$DYNAMICLINKS_APP_DOMAIN_PATH" />
             <feature name="FirebaseDynamicLinks">
                 <param name="android-package"
                     value="by.chemerisuk.cordova.firebase.FirebaseDynamicLinksPlugin" />
